@@ -50,21 +50,21 @@ public class StudentConfig {
 
         /**建造者模式方法*/
         public StudentConfig build(){
-            StudentConfig student = new StudentConfig();
-            appleConfig(student);
-            return student;
+            StudentConfig studentConfig = new StudentConfig();
+            appleConfig(studentConfig);
+            return studentConfig;
         }
 
         /**
          * 应用配置
-         * @param student
+         * @param studentConfig
          */
-        private void appleConfig(StudentConfig student){
-            student.id = this.id;
-            student.name = this.name;
-            student.sex = this.sex;
-            student.department = this.department;
-            student.age = this.age;
+        private void appleConfig(StudentConfig studentConfig){
+            studentConfig.id = this.id;
+            studentConfig.name = this.name;
+            studentConfig.sex = this.sex;
+            studentConfig.department = this.department;
+            studentConfig.age = this.age;
 
             if(this.listener!=null){
                 this.listener.onDismiss();
